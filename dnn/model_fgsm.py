@@ -3,9 +3,9 @@ from dnn.deep_convnet import DeepConvNet
 
 network = DeepConvNet()
 
-network.load_params("dnn/deep_convnet_params.pkl")
+# network.load_params("dnn/deep_convnet_params.pkl")
 
-# network.load_params("dnn/deep_convnet_params_fgsm.pkl")
+network.load_params("dnn/deep_convnet_params_fgsm.pkl")
 
 def predict(x):
     pre = network.predict(x.reshape(1,1,28,28))

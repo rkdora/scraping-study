@@ -7,7 +7,7 @@ from PIL import Image
 from datetime import datetime
 import numpy as np
 
-from dnn import model
+from dnn import model_fgsm
 
 now_time = datetime.now().strftime('%s')
 
@@ -22,7 +22,7 @@ img_path = './img/' + now_time + '.jpg'
 img.save(img_path)
 img_arr = np.asarray(img) / 255
 
-pre_label = model.predict(img_arr)
+pre_label = model_fgsm.predict(img_arr)
 
 time.sleep(1)
 
